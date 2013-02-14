@@ -28,32 +28,43 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h3>Welcome to GitHub Pages.</h3>
+          <h1>GridMap</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<h2>Overview</h2>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<p>A mapping tool intented for level design. Once the setup is done, you can find events in a log file and print a density map over an existing picture.<br>
+This tool was developped for DeepVoid (<a href="http://deepvoid.eu">http://deepvoid.eu</a>).</p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<h2>Usage</h2>
 
-<h3>Designer Templates</h3>
+<p>You can call the script this way : gridmap.py event resolution<br>
+"event" will specify the event name to be searched in log. Events have a specific format.<br>
+"resolution" will specify the size of the computing unit, defined in real-world units (those used in the log file).  </p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>The format used in log is the following : "DVL/SHOOT/X/-305.2567/Y/-1557.8965/Z/46.5563/EDL"<br>
+It starts and ends by specific markers DVL and EDL, starts with the event name ("SHOOT" here) then stores the X, Y, Z coordinates.  </p>
 
-<h3>Rather Drive Stick?</h3>
+<p>The input log file has to be named "Launch.log".<br>
+The input picture file is hardcoded.<br>
+The output file is saved with the _heatmap extension after the source image name.  </p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<h2>Hardcoded parameters</h2>
 
-<h3>Authors and Contributors</h3>
+<p>Anytime you change the original picture, you will have to edit the script.  </p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>xmin = X coordinate of the picture left, in real world units<br>
+xmax = X coordinate of the picture right, in real world units<br>
+ymin = Y coordinate of the picture bottom, in real world units<br>
+ymax = Y coordinate of the picture top, in real world units<br>
+logBase : log base to use in calculation<br>
+bendAmount : amount of color to draw over the picture, from 0 to 1<br>
+unrealToPixelRatio : size of a pixel, in real world units<br>
+sourceImage : PNG file to use as a picture reference  </p>
 
-<h3>Support or Contact</h3>
+<h2>Contact, people, etc</h2>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>GridMap is developped by Gwennaël ARBONA.<br>
+In case of bugs, questions, requests, ideas, please use the message system on GitHub.</p>
         </section>
 
         <aside id="sidebar">
