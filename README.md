@@ -11,9 +11,9 @@ This tool was developped for DeepVoid (http://deepvoid.eu).
 Usage
 --------
 
-You can call the script this way : gridmap.py <event> <resolution>  
-<event> will specify the event name to be searched in log. Events have a specific format.  
-<resolution> will specify the size of the computing unit, defined in real-world units (those used in the log file).  
+You can call the script this way : gridmap.py event resolution  
+"event" will specify the event name to be searched in log. Events have a specific format.  
+"resolution" will specify the size of the computing unit, defined in real-world units (those used in the log file).  
   
 The format used in log is the following : "DVL/SHOOT/X/-305.2567/Y/-1557.8965/Z/46.5563/EDL"  
 It starts and ends by specific markers DVL and EDL, starts with the event name ("SHOOT" here) then stores the X, Y, Z coordinates.  
