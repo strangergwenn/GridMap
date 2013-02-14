@@ -1,5 +1,5 @@
 #**
-#*  This work is distributed under the Lesser General Public License,
+#*  This work is distributed under the General Public License,
 #*	see LICENSE for details
 #*
 #*	gridmap tool for DEEPVOID - Heatmap generation from event file (Launch.log with DV logging)
